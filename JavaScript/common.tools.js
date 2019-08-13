@@ -115,7 +115,7 @@ window.chaos = {};
 
 }(window.chaos, jQuery));
 (function($){
-	//判断浏览器类型
+	//判断浏览器类型不包含chrome
 	var userAgent = navigator.userAgent.toLowerCase();
 	jQuery.browser = {
 		version: (userAgent.match(/.+(?:rv|it|ra|ie)[\/: ](\d.+)/) || [])[1],

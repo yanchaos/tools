@@ -113,6 +113,19 @@ window.chaos = {};
 		}
 	}
 
+	/**
+	* 根据property属性对数组进行排序，用法： Arr.sort(NS.tools.compare(property))
+	*/
+	NS.tools.compare = function(property, sortKey){
+		return (firstObj, secondObj) => {
+			const firstvalue = firstObj[property];
+			const secondvalue = secondObj[property];
+			if(sortKey && sortKey == 'desc')
+				return secondvalue - firstvalue;	//降序
+			else
+				return firstvalue - secondvalue;	//升序
+		}
+	}
 }(window.chaos, jQuery));
 (function($){
 	//判断浏览器类型不包含chrome
